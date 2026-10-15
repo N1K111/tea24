@@ -5,7 +5,6 @@
 
 int main(int argc, char **argv) {
 
-    int var = 4711;
 
     /**
      * The {fmt} lib is a cross platform library for printing and formatting text
@@ -13,8 +12,28 @@ int main(int argc, char **argv) {
      * More info at https://fmt.dev/12.0/api/
      */
     fmt::print("Hello, {}!\n", tea::PROJECT_NAME);
+    
+    int i = 0;
+    /*for (size_t i = 0; i < argc; i++)
+    {
+        fmt::println("Argument: {}, Adresse: {}", argv[i], fmt::ptr(&argv[i]));
+    }
+    */
 
     /* INSERT YOUR CODE HERE */
+
+    /*Teil 1 Zeiger-Grundlagen*/
+
+    int x = 10;
+    int* p = &x;
+
+    fmt::println("Variable x: Wert: {}, Adresse: {}", x, fmt::ptr(&x));
+    fmt::println("Variable p: Wert: {}, Adresse: {}", *p, fmt::ptr(&p));
+
+    *p = 42;
+
+    fmt::println("Variable x: Wert: {}, Adresse: {}", x, fmt::ptr(&x));
+    fmt::println("Variable p: Wert: {}, Adresse: {}", *p, fmt::ptr(&p));
 
     return 0; /* exit gracefully*/
 }
