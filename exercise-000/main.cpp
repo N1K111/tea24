@@ -1,7 +1,16 @@
 #include <fmt/chrono.h>
 #include <fmt/format.h>
-
 #include "config.h"
+
+
+void changeValueByParameter(int value) {
+    value = 99;
+    fmt::println("Variable IN Funktion: {}", value);
+}
+
+void changeValueByPointer(int* value) {
+    *value = 99;
+}
 
 int main(int argc, char **argv) {
 
@@ -42,7 +51,19 @@ int main(int argc, char **argv) {
 
     fmt::println("Pointer_Double: Wert {}, Adresse {}", *p_double, fmt::ptr(&p_double));
 
-    delete p;
-    fmt::println("Pointer_Double: Wert {}, Adresse {}", *p_double, fmt::ptr(&p_double));
+    delete p_double;
+    /*Teil 3 Funktionen mit Zeigern*/
+
+    int test_val = 10;
+    fmt::println("Variable vor Funktion: {}", test_val);
+    changeValueByParameter(test_val);
+    fmt::println("Variable nach Funktion: {}", test_val);
+
+    fmt::println("Variable vor Funktion_P: {}", test_val);
+    changeValueByPointer(&test_val);
+    fmt::println("Variable nach Funktion_P: {}", test_val);
+    
+    
     return 0; /* exit gracefully*/
 }
+
