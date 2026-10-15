@@ -35,5 +35,14 @@ int main(int argc, char **argv) {
     fmt::println("Variable x: Wert: {}, Adresse: {}", x, fmt::ptr(&x));
     fmt::println("Variable p: Wert: {}, Adresse: {}", *p, fmt::ptr(&p));
 
+    /*Teil 2 Speicherverwaltung*/
+
+    double* p_double;
+    p_double = new double{3.1415};
+
+    fmt::println("Pointer_Double: Wert {}, Adresse {}", *p_double, fmt::ptr(&p_double));
+
+    delete p;
+    fmt::println("Pointer_Double: Wert {}, Adresse {}", *p_double, fmt::ptr(&p_double));
     return 0; /* exit gracefully*/
 }
