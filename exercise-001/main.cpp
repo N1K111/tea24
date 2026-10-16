@@ -33,5 +33,5 @@ int main(int argc, char **argv) {
 }
 
 void foo() {
-    fmt::println("[foo] Hello from foo!");
+    fmt::println("[{}] Hello from foo!", __func__);
 }
