@@ -5,14 +5,8 @@
 
 int main(int argc, char **argv) {
 
-    /**
-     * The {fmt} lib is a cross platform library for printing and formatting text
-     * it is much more convenient than std::cout and printf
-     * More info at https://fmt.dev/latest/api.html
-     */
-    fmt::print("Hello, {}!\n", tea::PROJECT_NAME);
-
-    /* INSERT YOUR CODE HERE */
+    int globalVar = 1;
+    fmt::println("[main] Var1: {}[{}]", globalVar, fmt::ptr(globalVar));
 
     return 0; /* exit gracefully*/
 }
