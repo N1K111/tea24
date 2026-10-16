@@ -28,6 +28,7 @@ int main(int argc, char **argv) {
 
     foo();
     fmt::println("[main] Foo: {}", fmt::ptr(&foo));
+    int y = 19;
 
     return 0; /* exit gracefully*/
 }
