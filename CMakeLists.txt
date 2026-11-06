@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.10.2)
 
 # Set the project name to your project name, template isn't very descriptive
-project (tea24)
+project (tea24 VERSION 1.0.0)
 
 # Conditionally turn on/off parts of the build (global-level)
 option(BUILD_TESTS "Build unit tests" ON)
@@ -61,9 +61,9 @@ include(cmake/Doxygen.cmake)
 
 # Exercises & solutions
 
-add_subdirectory(exercise-000)
-add_subdirectory(exercise-001)
-add_subdirectory(exercise-002)
+#add_subdirectory(exercise-000)
+#add_subdirectory(exercise-001)
+#add_subdirectory(exercise-002)
 add_subdirectory(exercise-003)
 add_subdirectory(libs/version)
 

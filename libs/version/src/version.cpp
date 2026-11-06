@@ -1,20 +1,21 @@
-#include <fmt/chrono.h>
-#include <fmt/format.h>
+#include "version/version.h"
+#include "version_config.h"
+#include <string>
 
 const char* projectName(){
     return "tea24";
 }
 
 int major() {
-    return 0;
+    return VERSION_LIB_VERSION_MAJOR;
 }
 
 int minor(){
-    return 0;
+    return VERSION_LIB_VERSION_MINOR;
 }
 
 int patch(){
-    return 1;
+    return VERSION_LIB_VERSION_PATCH;
 }
 
 std::string fullVersion(){
